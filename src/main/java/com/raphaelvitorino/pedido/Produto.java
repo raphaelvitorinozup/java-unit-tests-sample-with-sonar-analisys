@@ -1,3 +1,5 @@
+package com.raphaelvitorino.pedido;
+
 public class Produto {
 	private String nome;
 	private String descricao;

@@ -1,3 +1,5 @@
+import com.raphaelvitorino.pedido.CarrinhoCompra;
+import com.raphaelvitorino.pedido.Produto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -28,8 +30,7 @@ public class CarrinhoCompraTest {
 		Produto mouse = new Produto("Mouse Razer", "Viper 20000 DPI", 450.50);
 		produtos.add(teclado);
 		produtos.add(mouse);
-		CarrinhoCompra carrinhoCompra = new CarrinhoCompra("João", produtos);
-		return carrinhoCompra;
+		return new CarrinhoCompra("João", produtos);
 	}
 }
 

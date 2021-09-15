@@ -1,3 +1,5 @@
+package com.raphaelvitorino.pedido;
+
 import java.util.List;
 
 public class CarrinhoCompra {
