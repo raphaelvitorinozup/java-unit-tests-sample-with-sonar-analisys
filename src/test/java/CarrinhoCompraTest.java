@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarrinhoCompraTest {
+class CarrinhoCompraTest {
 	@Test
 	@DisplayName("Deve retornar o valor total da compra")
-	public void deveRetornarValorTotalCompra() {
+	void deveRetornarValorTotalCompra() {
 		CarrinhoCompra carrinhoCompra = gerarCarrinhoCompra();
 		Double valorTotal = carrinhoCompra.getValorTotalCompra();
 		Assertions.assertEquals(valorTotal, 1550.50);
@@ -18,7 +18,7 @@ public class CarrinhoCompraTest {
 
 	@Test
 	@DisplayName("Deve retornar a quantidade de itens do carrinho")
-	public void deveRetornarQuantidadeItensCarrinho() {
+	void deveRetornarQuantidadeItensCarrinho() {
 		CarrinhoCompra carrinhoCompra = gerarCarrinhoCompra();
 		int quantidade = carrinhoCompra.getTotalItensCompra();
 		Assertions.assertEquals(quantidade, 2);
