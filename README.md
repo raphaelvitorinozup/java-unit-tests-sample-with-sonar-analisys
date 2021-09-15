@@ -1,1 +1,1 @@
-# java-unit-tests-sample-with-sonar-analisys
+# java-unit-tests-sample-with-sonar-analysis
