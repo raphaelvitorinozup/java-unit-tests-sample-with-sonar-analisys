@@ -8,7 +8,7 @@ public class SonarqubeBug {
 	public String toString() {
 		List<String> lista = new ArrayList<>();
 		if (lista.isEmpty()) {
-			return null; // Noncompliant
+			return ""; // Noncompliant
 		} else {
 			return "string";
 		}
