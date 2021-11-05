@@ -30,19 +30,17 @@ public class Order {
 	}
 
 	public void finishOrder() throws Exception {
-		if(!items.isEmpty()) {
+		if (!items.isEmpty()) {
 			this.status = OrderStatus.FINISHED;
-		}
-		else {
+		} else {
 			throw new Exception("Order cannot be empty");
 		}
 	}
 
 	public boolean isOrderEmpty() {
-		if (getOrderItemAmount() > 1) {
+		if (getOrderItemAmount() >= 1) {
 			return false;
-		}
-		else {
+		} else {
 			return true;
 		}
 	}

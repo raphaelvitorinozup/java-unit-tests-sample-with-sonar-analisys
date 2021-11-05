@@ -3,6 +3,7 @@ package com.raphaelvitorino.order;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -54,24 +55,35 @@ class OrderTest {
 
 	@Test
 	@DisplayName("Should return false when order is not empty")
-	void shouldReturnFlaseWhenOrderIsNotEmpty() {
+	void shouldReturnFalseWhenOrderIsNotEmpty() {
 		Order order = buildOrder();
+		boolean isOrderEmpty = order.isOrderEmpty();
+		assertThat(isOrderEmpty).isFalse();
+	}
+
+	@Test
+	@DisplayName("Should return false when item amount is equal to one")
+	void shouldReturnFalseWhenItemAmountIsEqualToOne() {
+		List<Item> list = new ArrayList<>();
+		Item headphone = new Item("Headphone HyperX", "Cloud Revolver S", 650.00);
+		list.add(headphone);
+		Order order = new Order("Robert", list);
 		boolean isOrderEmpty = order.isOrderEmpty();
 		assertThat(isOrderEmpty).isFalse();
 	}
 
 	private Order buildOrder() {
 		List<Item> items = new ArrayList<>();
-		Item keyboard = new Item("Teclado Corsair K95", "RGB", 1100.00);
+		Item keyboard = new Item("Keyboard Corsair K95", "RGB", 1100.00);
 		Item mouse = new Item("Mouse Razer", "Viper 20000 DPI", 450.50);
 		items.add(keyboard);
 		items.add(mouse);
-		return new Order("João", items);
+		return new Order("John", items);
 	}
 
 	private Order buildEmptyOrder() {
 		List<Item> items = new ArrayList<>();
-		return new Order("João", items);
+		return new Order("John", items);
 	}
 }
 
